@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.CheckComboBox?>
+
+<AnchorPane id="AnchorPane" fx:id="anch" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1118.0" style="-fx-background-color: #e8e9ee;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StudentPackage.StudentFXMLController">
+   <children>
+      <TitledPane layoutX="10.0" layoutY="14.0" prefHeight="678.0" prefWidth="383.0" text="Student Information">
+         <content>
+            <ScrollPane prefHeight="640.0" prefWidth="343.0">
+               <content>
+                  <VBox prefHeight="788.0" prefWidth="369.0" spacing="20.0">
+                     <children>
+                        <VBox prefHeight="611.0" prefWidth="329.0" spacing="20.0">
+                           <children>
+                              <ImageView fitHeight="96.0" fitWidth="96.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../icon2/reading.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets left="125.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <HBox prefHeight="36.0" prefWidth="329.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="182.0" text="Student ID">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="StudentId" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="277.0" promptText="Student ID *" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="36.0" prefWidth="329.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="206.0" text="First Name">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="StudentFirstName" labelFloat="true" prefHeight="25.0" prefWidth="301.0" promptText="Please Enter First Name *" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="46.0" prefHeight="36.0" prefWidth="329.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="179.0" text="Last Name">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="StudentLastName" labelFloat="true" prefHeight="25.0" prefWidth="272.0" promptText="Please Enter Last Name *" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="20.0" layoutY="270.0" prefHeight="36.0" prefWidth="329.0" spacing="15.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="103.0" text="Gender *">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXRadioButton fx:id="MaleRadioButton" text="Male">
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="FemaleRadioButton" layoutX="130.0" layoutY="10.0" text="Female">
+                                       <HBox.margin>
+                                          <Insets top="3.0" />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </JFXRadioButton>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="20.0" layoutY="315.0" prefHeight="36.0" prefWidth="329.0" spacing="15.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="147.0" text="Class ">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXComboBox fx:id="ClassComboBox" labelFloat="true" prefHeight="25.0" prefWidth="250.0" promptText="Please Select Class *">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></JFXComboBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="82.0" prefHeight="36.0" prefWidth="329.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="210.0" text="Phone Number">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="PhoneNumber" labelFloat="true" prefHeight="25.0" prefWidth="301.0" promptText="Please Enter Phone Number *" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="20.0" layoutY="495.0" prefHeight="36.0" prefWidth="329.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="176.0" text="Email">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="Email" labelFloat="true" prefHeight="25.0" prefWidth="267.0" promptText="Please Enter Student E-mail" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="118.0" prefHeight="36.0" prefWidth="329.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="181.0" text="Address">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="Adress" labelFloat="true" prefHeight="25.0" prefWidth="269.0" promptText="Please Enter Student Adress" />
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="HobbiesHbox" layoutX="20.0" layoutY="360.0" prefHeight="36.0" prefWidth="329.0" spacing="15.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="122.0" text="Hobbies">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckComboBox fx:id="checkComboBox" prefHeight="25.0" prefWidth="221.0">
+                                       <effect>
+                                          <SepiaTone level="0.0" />
+                                       </effect>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </CheckComboBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="154.0" prefHeight="36.0" prefWidth="329.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="193.0" text="Parent ID">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField fx:id="ParentName" labelFloat="true" prefHeight="25.0" prefWidth="278.0" promptText="Please Enter Parent ID *" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="190.0" prefHeight="36.0" prefWidth="329.0">
+                                 <children>
+                                    <Label prefHeight="25.0" prefWidth="135.0" text="Birth date">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXDatePicker fx:id="BirthDate" editable="false" minWidth="-Infinity" prefHeight="32.0" prefWidth="225.0" promptText="Please Select Birth Date">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></JFXDatePicker>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="226.0" prefHeight="36.0" prefWidth="329.0">
+                                 <children>
+                                    <Label minWidth="-Infinity" prefHeight="25.0" prefWidth="135.0" text="Registration date">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXDatePicker fx:id="RegisterDate" editable="false" minWidth="-Infinity" prefHeight="32.0" prefWidth="225.0" promptText="Please Select Redistration Date">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></JFXDatePicker>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </VBox>
+                        <HBox alignment="CENTER" prefHeight="64.0" prefWidth="311.0" spacing="40.0" stylesheets="@../icon/dark-theme.css">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#AddStudent">
+                                 <graphic>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icon/Add%20User%20Male_50px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#UpdateStudent">
+                                 <graphic>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icon/Registration_50px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button layoutX="76.0" layoutY="10.0" mnemonicParsing="false" onAction="#DeleteStudent">
+                                 <graphic>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../icon/Delete%20User%20Male_50px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="398.0" layoutY="60.0" prefHeight="636.0" prefWidth="714.0" text="Student Table">
+        <content>
+            <ScrollPane>
+               <content>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="2700.0" stylesheets="@../icon/dark-theme.css">
+                     <children>
+                        <TableView fx:id="table" layoutX="30.0" layoutY="103.0" minWidth="-Infinity" onKeyReleased="#LoadFromTable" onMousePressed="#LoadFromTable" prefHeight="624.0" prefWidth="2400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="StudentIDCol" prefWidth="91.0" text="Student ID" />
+                            <TableColumn fx:id="FirstNameCol" prefWidth="149.0" text="First Name" />
+                              <TableColumn fx:id="LastNameCol" minWidth="8.0" prefWidth="149.0" text="Last Name" />
+                              <TableColumn fx:id="GenderCol" minWidth="0.0" prefWidth="98.0" text="Gender" />
+                              <TableColumn fx:id="ClassCol" minWidth="0.0" prefWidth="95.0" text="Class" />
+                              <TableColumn fx:id="PhoneCol" minWidth="0.0" prefWidth="200.0" text="Phone Number" />
+                              <TableColumn fx:id="EmailCol" minWidth="1.0" prefWidth="300.0" text="Email" />
+                              <TableColumn fx:id="AddrssCol" prefWidth="400.0" text="Address" />
+                              <TableColumn fx:id="HobbiesCol" prefWidth="500.0" text="Hobbies" />
+                              <TableColumn fx:id="ParentIDCol" prefWidth="200.0" text="Parent ID" />
+                              <TableColumn fx:id="BirthDayCol" prefWidth="150.0" text="Birth Date" />
+                              <TableColumn fx:id="RegestrationDateCol" prefWidth="150.0" text="Registration Date" />
+                              <TableColumn fx:id="RegestrationByCol" prefWidth="150.0" text="Registration By" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+        </content>
+         <effect>
+            <SepiaTone level="0.67" />
+         </effect>
+      </TitledPane>
+      <HBox layoutX="457.0" layoutY="21.0" prefHeight="32.0" prefWidth="404.0" spacing="30.0">
+         <children>
+            <JFXTextField fx:id="SearchTectField" labelFloat="true" onKeyReleased="#SearchStudent" prefHeight="25.0" prefWidth="201.0" promptText="Search word" />
+            <JFXComboBox fx:id="SearchComboBox" prefHeight="25.0" prefWidth="157.0" promptText="Search technique">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
